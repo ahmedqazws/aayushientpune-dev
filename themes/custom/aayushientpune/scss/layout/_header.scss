@@ -1,0 +1,54 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .04);
+    z-index: 1;
+
+    &__logo-img {
+        @include breakpoint(ipad-max) {
+            display: block;
+            margin: auto;
+        }
+    }
+
+    .navigation-box {
+        margin-top: 15px;
+
+        &__top {
+            display: flex;
+            justify-content: flex-end;
+
+            a {
+                color: $orange-bg;
+                font-weight: bold;
+
+                &:last-child {
+                    margin-left: 15px;
+
+                    @include breakpoint(ipad-max) {
+                        margin-left: 0px;
+                    }
+                }
+
+                label {
+                    position: relative;
+                    margin: 0px;
+
+                    &:after {
+                        content: '|';
+                        margin: 0px 2px;
+                    }
+                }
+            }
+
+            @include breakpoint(ipad-max) {
+                flex-flow: column;
+                align-items: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "crawl": false,
+  "customTests": [],
+  "dest": "/PATH/TO/modernizr-output.js",
+  "tests": [
+    "webpalpha",
+    "webpanimation",
+    [
+      "webplossless",
+      "webp-lossless"
+    ],
+    "webp"
+  ],
+  "options": [
+    "setClasses"
+  ],
+  "uglify": true
+}

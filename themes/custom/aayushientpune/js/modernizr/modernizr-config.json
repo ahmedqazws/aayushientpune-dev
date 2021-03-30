@@ -1,0 +1,12 @@
+{
+  "minify": true,
+  "options": [
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/img/webp-alpha",
+    "test/img/webp-animation",
+    "test/img/webp-lossless",
+    "test/img/webp"
+  ]
+}

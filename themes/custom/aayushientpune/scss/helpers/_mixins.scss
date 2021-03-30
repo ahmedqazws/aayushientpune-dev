@@ -1,0 +1,183 @@
+/* placeholder */
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+// Start Calculate em size 
+@function calculateRem($size) {
+  $remSize: $size / 14px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: ($size / 14px) * 1rem;
+}
+
+// End Calculate em size
+
+$breakpoints: (
+  'custom-small-mobile-max': (max-width: 359px),
+  'portrait-mobile-max': (max-width: 575px),
+  'mobile-min': (min-width: 576px),
+  'mobile-max': (max-width: 767px),
+  'ipad-min': (min-width: 768px),
+  'ipad-max': (max-width: 991px),
+  'desktop-min': (min-width: 992px),
+  'desktop-mid': (max-width: 1024px),
+  'desktop-max': (max-width: 1199px),
+  'large-desktop-min': (min-width: 1200px),
+  'medium-large-desktop-min': (min-width: 1366px),
+  'medium-large-desktop-max': (max-width: 1400px),
+);
+
+@mixin breakpoint($name) {
+    @if map-has-key($breakpoints, $name) {
+      @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "Couldn't find a breakpoint named `#{$name}`.";
+  }
+}	
+
+
+// Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  // background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+// Single side border-radius
+
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  // background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  // background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  // background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  // background-clip: padding-box;
+}
+
+// Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Transition
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+  -webkit-transition: $what $time $how;
+  -moz-transition:    $what $time $how;
+  -ms-transition:     $what $time $how;
+  -o-transition:      $what $time $how;
+  transition:         $what $time $how;
+}
+
+// rgba Border
+@mixin border-rgba ($width, $style, $color, $opacity) {
+  border: $width $style rgba(red($color), green($color), blue($color), $opacity);
+}
+
+@mixin border-left-rgba ($width, $style, $color, $opacity) {
+  border-left: $width $style rgba(red($color), green($color), blue($color), $opacity);
+}
+
+@mixin border-bottom-rgba ($width, $style, $color, $opacity) {
+  border-bottom: $width $style rgba(red($color), green($color), blue($color), $opacity);
+}
+
+@mixin border-top-rgba ($width, $style, $color, $opacity) {
+  border-top: $width $style rgba(red($color), green($color), blue($color), $opacity);
+}
+// End rgba Border
+
+// Background Color rgba
+@mixin background-color-rgba($color, $opacity) {
+  background-color: rgba($color, $opacity);
+}
+// End Background Color rgba
+
+// Background Color rgba
+@mixin color-rgba($color, $opacity) {
+  color: rgba($color, $opacity);
+}
+// End Background Color rgba
+
+// Horizontal and Center Align using Transform
+@mixin horizontal-center-transform {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin vertical-center-transform {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-vertical-center-transform {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Center Block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Pseudo class
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin black-overlay($width: '', $height: '', $opacity: '', ) {
+  position: absolute;
+  content: "";
+  width: $width;
+  height: $height;
+  @include background-color-rgba($black, $opacity);
+}
+
+@mixin common-box-shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}

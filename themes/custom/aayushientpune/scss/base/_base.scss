@@ -1,0 +1,31 @@
+html {
+	font-size: 14px;
+}
+
+body {
+	font-size: 1rem;
+	font-family: $primary-font;
+	color: $body-text;
+}
+
+.container {
+	max-width: 1170px;
+	width: 100%;
+}
+
+a {
+	&:hover {
+		color: $orange-text;
+		transition: 0.3s;
+		text-decoration: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+p {
+	@include font-size(14px);
+	margin: 0;
+}

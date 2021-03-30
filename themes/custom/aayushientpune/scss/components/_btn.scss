@@ -1,0 +1,40 @@
+.btn {
+    font-weight: bolder;
+    text-transform: capitalize;
+    border-radius: 6px;
+    padding: 10px 25px;
+    transition: all .5s ease;
+    @include breakpoint(ipad-max) {
+        padding: 5px 15px;
+    }
+    &--primary {
+        color: $white;
+        border-color: $orange;
+        background-color: $orange;
+        &:hover,
+        &:focus {
+            border-color: $orange;
+            background-color: $white;
+        }
+        &-border {
+            color: $body-text;
+            border-color: $body-text;
+            background-color: $white;
+            &:hover,
+            &:focus {
+                color: $white;
+                background-color: $orange;
+                border-color: $orange;
+            }
+        }
+    }
+    &--gradient {
+        color: $white-text;
+        background: linear-gradient(to right, #f90 0%, #e5322e 100%);
+        &:hover {
+            color: $white-text;
+            transition: 0.5s ease;
+            background: linear-gradient(to left, #f90 0%, #e5322e 100%);
+        }
+    }
+}

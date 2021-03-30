@@ -1,0 +1,39 @@
+// product-list-page-view
+.product-list-page-view {
+    margin-top: 100px;
+
+    .tabs {
+        margin-bottom: 30px;
+
+        @include breakpoint(mobile-max) {
+            margin-top: 40px;
+        }
+
+        @include breakpoint(portrait-mobile-max) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__table {
+        max-width: 600px;
+        width: 100%;
+        margin-bottom: 40px;
+
+        @include breakpoint(portrait-mobile-max) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .table-title {
+        @include font-size(28px);
+        text-transform: uppercase;
+    }
+
+    a+a {
+        margin-left: 15px;
+    }
+
+    @include breakpoint(portrait-mobile-max) {
+        margin-bottom: 80px;
+    }
+}

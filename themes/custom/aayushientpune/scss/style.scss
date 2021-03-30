@@ -1,0 +1,19 @@
+@charset 'utf-8';
+
+//Vendor
+@import "vendors/__vendor-dir";
+
+//Helpers
+@import "helpers/__helpers-dir";
+
+//Base Styles
+@import "base/__base-dir";
+
+//Components
+@import "components/__components-dir";
+
+//Layout
+@import "layout/__layout-dir";
+
+//Pages
+@import "pages/__pages-dir";

@@ -1,0 +1,21 @@
+.path-frontpage {
+    .node__content {
+        margin-top: 0;
+    }
+    #main {
+        max-width: 100%;
+        padding: 68px 0 0 0;
+        @include breakpoint(mobile-max) {
+            padding: 59px 0 0 0;
+        }
+    }
+}
+.layout-main-wrapper {
+    .row-offcanvas {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+.main-content {
+    padding: 0;
+}

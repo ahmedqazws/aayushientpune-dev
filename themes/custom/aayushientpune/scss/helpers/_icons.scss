@@ -1,0 +1,100 @@
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9yqee4');
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9yqee4#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?9yqee4') format('truetype'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?9yqee4') format('woff'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?9yqee4##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-switch-on {
+  &:before {
+    content: $icon-switch-on;
+  }
+}
+
+.icon-lightbulb {
+  &:before {
+    content: $icon-lightbulb;
+  }
+}
+
+.icon-factory {
+  &:before {
+    content: $icon-factory;
+  }
+}
+
+.icon-certificate-icon {
+  &:before {
+    content: $icon-certificate-icon;
+  }
+}
+
+.icon-customer-service-icon {
+  &:before {
+    content: $icon-customer-service-icon;
+  }
+}
+
+.icon-delivery-truck-icon {
+  &:before {
+    content: $icon-delivery-truck-icon;
+  }
+}
+
+.icon-support-icon {
+  &:before {
+    content: $icon-support-icon;
+  }
+}
+
+.icon-tropy-icon {
+  &:before {
+    content: $icon-tropy-icon;
+  }
+}
+
+.icon-crane {
+  &:before {
+    content: $icon-crane;
+  }
+}
+
+.icon-hamburger {
+  &:before {
+    content: $icon-hamburger;
+  }
+}
+
+.icon-down-arrow {
+  &:before {
+    content: $icon-down-arrow; 
+  }
+}
+
+// our products
+.Our-product__icon-img {
+  width: 60px;
+  height: 60px;
+  max-width: 100%;
+  display: block;
+}

@@ -1,0 +1,39 @@
+// brand-image-wrap
+.brand-image-wrap {
+    text-align: center;
+    margin-top: 100px;
+
+    h5 {
+        text-transform: capitalize;
+        margin-bottom: 15px;
+
+        @include breakpoint(mobile-max) {
+            margin-top: 50px;
+        }
+    }
+
+    .brand-image-list {
+
+        &--2,
+        &--3,
+        &--4,
+        &--5,
+        &--6,
+        &--7,
+        &--8,
+        &--9,
+        &--10,
+        &--11,
+        &--12,
+        &--13,
+        &--14,
+        &--15,
+        &--16 {
+            margin-top: 80px;
+
+            @include breakpoint(mobile-max) {
+                margin-top: 0px;
+            }
+        }
+    }
+}

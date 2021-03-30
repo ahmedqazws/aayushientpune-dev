@@ -1,0 +1,26 @@
+{
+  "name": "neosoft_gulp_setup",
+  "version": "1.0.0",
+  "description": "Neosoft Gulp Setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pradip Modh",
+  "license": "ISC",
+  "browserslist": [
+    "last 99 version",
+    "> 2%"
+  ],
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "dependencies": {}
+}

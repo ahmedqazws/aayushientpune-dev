@@ -1,0 +1,19 @@
+.block-title {
+    @include font-size(36px);
+    font-family: $primary-font;
+    margin-bottom: 20px;
+    font-weight: bolder;
+
+    @include breakpoint(desktop-max) {
+        @include font-size(31px);
+        margin-bottom: 17.5px;
+    }
+
+    @include breakpoint(ipad-max) {
+        @include font-size(25px);
+    }
+
+    &--white {
+        color: $white-text;
+    }
+}

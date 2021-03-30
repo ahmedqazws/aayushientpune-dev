@@ -1,0 +1,72 @@
+// acordion style
+.accordion {
+    .btn-link {
+        width: 100%;
+        border: none;
+        outline: none;
+        text-decoration: none;
+        text-align: left;
+        border-radius: 6px;
+        padding: 0;
+        position: relative;
+        &:after {
+            content: "\e90a";
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            font-family: 'icomoon' !important;
+            transform: translateY(-50%) rotate(180deg);
+            @include transition(rotate, .5s, ease);
+        }
+        &.collapsed {
+            &:after {
+                transform: translateY(-50%) rotate(0deg);
+            }
+        }
+    }
+    &--style-1 {
+        .card {
+            border: none;
+            &-header {
+                padding: 0;
+                background-color: transparent;
+                border-bottom: none;
+                margin-bottom: 0 !important;
+            }
+            &-body {
+                padding: 15px 0;
+            }
+        }
+        .card + .card {
+            margin-top: 8px;
+        }
+        .btn-link {
+            color: $white;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: capitalize;
+            padding: 10px 15px !important;
+            background-color: $orange;
+            border: 1px solid $orange;
+            @include transition(all, .5s ease);
+            @include breakpoint(ipad-max) {
+                font-size: 13px;
+            }
+            &:hover,
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+            &.collapsed {
+                color: $dark-gray-2;
+                background-color: transparent;
+                border: 1px solid $dark-gray-2;
+            }
+            &:after {
+                @include breakpoint(ipad-max) {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

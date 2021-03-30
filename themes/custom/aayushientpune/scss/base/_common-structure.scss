@@ -1,0 +1,83 @@
+// radius-box
+.common-radius-box {
+    padding: 20px 5px;
+    transition: 0.3s;
+    border-radius: 10px;
+    background: $light-bg;
+
+    @include breakpoint(desktop-max) {
+        padding: 14px 5px;
+    }
+
+    &--shadow {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+// after border
+.common-border-bottom {
+    position: relative;
+
+    &:after {
+        height: 2px;
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        position: absolute;
+        margin: 0 auto;
+        background: linear-gradient(to right, #f90 0%, #e5322e 100%);
+    }
+
+    &--white {
+
+        &:after {
+            background: $white-bg;
+        }
+    }
+}
+
+// breadcrumb-list
+.no-webp .breadcrumb-wrap {
+    background-image: url("https://ik.imagekit.io/ybfnkhj4f3c/breadcrumb/01.breadcrumb-bg_aFCLrX9Xx.jpg");
+}
+  
+.webp .breadcrumb-wrap {
+    background-image: url("https://ik.imagekit.io/ybfnkhj4f3c/breadcrumb/breadcrumb__Webp_/01.breadcrumb-bg_2EOFiTa2Xo.webp");
+}
+
+.breadcrumb-wrap {
+    padding: 70px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include breakpoint(desktop-max) {
+        padding: 50px 0;
+    }
+
+    @include breakpoint(ipad-max) {
+        padding: 38px 0;
+    }
+    
+    @include breakpoint(mobile-max) {
+        padding: 28px 0;
+    }
+
+    &__title {
+        margin: 0;
+        @include font-size(55px);
+        
+        @include breakpoint(desktop-max) {
+            @include font-size(39px)
+        }
+
+        @include breakpoint(ipad-max) {
+            @include font-size(30px)
+        }
+        span {
+            color: #fff;
+            font-family: $secondary-font;
+        }
+    }
+}

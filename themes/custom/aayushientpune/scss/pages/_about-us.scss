@@ -1,0 +1,13 @@
+// About-us
+.about-us {
+    margin-top: 120px;
+
+    &__title {
+        margin-bottom: 20px;
+    }
+    
+    &__description {
+        line-height: 1.9;
+        font-style: italic;
+    }
+}

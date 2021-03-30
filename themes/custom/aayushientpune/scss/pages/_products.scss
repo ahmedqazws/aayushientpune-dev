@@ -1,0 +1,51 @@
+// product-list__lighting
+.product-list {
+
+    &__lighting,
+    &__switch-gears,
+    &__crane,
+    &__industrial {
+        margin-top: 150px;
+
+        img {
+            width: 100%;
+            height: 253px;
+            object-fit: cover;
+            border-radius: 10px;
+
+            @include breakpoint(ipad-max) {
+                margin-bottom: 20px;
+            }
+        }
+
+        @include breakpoint(ipad-max) {
+            margin-top: 100px;
+        }
+    }
+
+    &__description-text {
+        @include font-size(13px);
+        margin-bottom: 20px;
+
+        @include breakpoint(ipad-max) {
+            @include font-size(10px);
+        }
+    }
+
+    &__title {
+        @include font-size(28px);
+        margin-bottom: 15px;
+    }
+
+    &__industrial,
+    &__switch-gears {
+        .row {
+            display: flex;
+            flex-flow: row-reverse;
+
+            @include breakpoint(ipad-max) {
+                flex-flow: column;
+            }
+        }
+    }
+}
